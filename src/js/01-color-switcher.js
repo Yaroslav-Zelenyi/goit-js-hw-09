@@ -6,11 +6,11 @@ function randomColor() {
   document.body.style.backgroundColor = getRandomHexColor();
 }
 
-function handleClickStart() {
+function onClickStart() {
   intervalId = setInterval(randomColor, 1000);
   startButton.disabled = true;
 }
-function handleClickStop() {
+function onClickStop() {
   clearInterval(intervalId);
   startButton.disabled = false;
 }
@@ -19,5 +19,5 @@ function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-startButton.addEventListener('click', handleClickStart);
-stopButton.addEventListener('click', handleClickStop);
+startButton.addEventListener('click', onClickStart);
+stopButton.addEventListener('click', onClickStop);
