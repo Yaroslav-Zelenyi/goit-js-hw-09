@@ -18,8 +18,6 @@ function createPromise(position, delay) {
   });
 }
 
-form.addEventListener('submit', FormSubmit);
-
 function FormSubmit(event) {
   event.preventDefault();
 
@@ -41,3 +39,5 @@ function FormSubmit(event) {
       });
   }
 }
+
+form.addEventListener('submit', FormSubmit);
